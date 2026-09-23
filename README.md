@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NeuroSaathi 🧠
 
 **NeuroSaathi** is an AI-assisted cognitive engagement and memory assistance platform designed to make daily cognitive activities simpler and more accessible for elderly users while helping caregivers understand activity patterns over time.
@@ -160,3 +161,6 @@ The following features are planned for future iterations:
 - Enhanced voice interaction
 - Clinician reporting module
 - Cloud push notifications for caregivers
+=======
+# NeuroSaathi
+>>>>>>> 146a4c6944095dd2a6b764e6e2c33d175437e197
