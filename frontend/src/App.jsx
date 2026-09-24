@@ -736,7 +736,7 @@ function App() {
 
       {/* Sync / Offline Banner */}
       {syncStatusToast && (
-        <div style={{ background: isOnline ? '#f0fdf4' : '#fff7ed', border: `1px solid ${isOnline ? '#16a34a' : '#c2410c'}`, color: isOnline ? '#15803d' : '#9a3412', padding: '12px 18px', borderRadius: '12px', marginBottom: '20px', fontSize: '15px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ background: isOnline ? '#f0fdf4' : '#fff7ed', border: `1px solid ${isOnline ? '#16a34a' : '#92400E'}`, color: isOnline ? '#15803d' : '#9a3412', padding: '12px 18px', borderRadius: '12px', marginBottom: '20px', fontSize: '15px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '10px' }}>
           <span>{isOnline ? '🟢' : '📡'}</span>
           <span>{syncStatusToast}</span>
         </div>
@@ -755,13 +755,13 @@ function App() {
         {mode === 'patient' && (
           <>
             {/* Top Bar for Patient Mode with Dementia-Friendly Language Selector */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#ffffff', padding: '14px 20px', borderRadius: '16px', border: '1px solid #cbd5e1', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#ffffff', padding: '14px 20px', borderRadius: '16px', border: '1px solid #C4B99A', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
               <button
                 className="action-button secondary"
                 style={{ padding: '12px 24px', fontSize: '18px', borderRadius: '30px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '8px' }}
                 onClick={() => setShowLanguageModal(true)}
               >
-                🌐 Language: <strong style={{ color: '#1e3a8a' }}>{activePatientLanguage}</strong>
+                🌐 Language: <strong style={{ color: '#2D5016' }}>{activePatientLanguage}</strong>
               </button>
 
               {/* Voice / TTS Status Indicator — color-coded by availability */}
@@ -791,7 +791,7 @@ function App() {
               <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, padding: '20px' }}>
                 <div style={{ background: '#ffffff', borderRadius: '24px', padding: '28px', maxWidth: '640px', width: '100%', maxHeight: '90vh', overflowY: 'auto', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                    <h2 style={{ fontSize: '26px', color: '#1e3a8a', margin: 0 }}>🌐 {t('language_selector_title', activePatientLanguage)}</h2>
+                    <h2 style={{ fontSize: '26px', color: '#2D5016', margin: 0 }}>🌐 {t('language_selector_title', activePatientLanguage)}</h2>
                     <button
                       onClick={() => setShowLanguageModal(false)}
                       style={{ background: '#f1f5f9', border: 'none', width: '40px', height: '40px', borderRadius: '50%', fontSize: '20px', fontWeight: 'bold', cursor: 'pointer' }}
@@ -814,9 +814,9 @@ function App() {
                           fontSize: '18px',
                           fontWeight: '700',
                           borderRadius: '16px',
-                          border: activePatientLanguage === lang.code ? '3px solid #1e3a8a' : '2px solid #cbd5e1',
-                          background: activePatientLanguage === lang.code ? '#eff6ff' : '#ffffff',
-                          color: activePatientLanguage === lang.code ? '#1e3a8a' : '#1e293b',
+                          border: activePatientLanguage === lang.code ? '3px solid #2D5016' : '2px solid #C4B99A',
+                          background: activePatientLanguage === lang.code ? '#E8F0E2' : '#ffffff',
+                          color: activePatientLanguage === lang.code ? '#2D5016' : '#1e293b',
                           cursor: 'pointer',
                           textAlign: 'center',
                           transition: 'all 0.2s ease'
@@ -849,8 +849,8 @@ function App() {
                 <p className="prompt-label">{t('what_to_do', activePatientLanguage)}</p>
 
                 {recommendation && (
-                  <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', padding: '18px 22px', borderRadius: '14px', marginBottom: '28px' }}>
-                    <div style={{ fontWeight: '800', color: '#1e3a8a', fontSize: '14px', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                  <div style={{ background: '#E8F0E2', border: '1px solid #C4B99A', padding: '18px 22px', borderRadius: '14px', marginBottom: '28px' }}>
+                    <div style={{ fontWeight: '800', color: '#2D5016', fontSize: '14px', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                       {t('guidance_title', activePatientLanguage)}
                     </div>
                     <div style={{ fontSize: '18px', color: '#1e293b', fontWeight: '600' }}>
@@ -934,7 +934,7 @@ function App() {
                       <img
                         src={`${API_SERVER}${currentFamilyMember.photo_url}`}
                         alt={currentFamilyMember.name}
-                        style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '20px', border: '4px solid #1e3a8a', marginBottom: '14px', boxShadow: 'var(--shadow-md)' }}
+                        style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '20px', border: '4px solid #2D5016', marginBottom: '14px', boxShadow: 'none' }}
                       />
                     ) : (
                       <div style={{ fontSize: '90px', marginBottom: '12px' }}>
@@ -946,7 +946,7 @@ function App() {
                       {currentFamilyMember.name}
                     </div>
 
-                    <h2 style={{ fontSize: '24px', color: '#1e3a8a', margin: '16px 0' }}>
+                    <h2 style={{ fontSize: '24px', color: '#2D5016', margin: '16px 0' }}>
                       {t('relationship_question', activePatientLanguage)}
                     </h2>
 
@@ -1030,7 +1030,7 @@ function App() {
                 <span className="small-tag">{t('matching_game', activePatientLanguage)}</span>
                 <h2 style={{ fontSize: '28px', marginBottom: '8px' }}>{t('matching_title', activePatientLanguage)}</h2>
                 {matchingFeedback && (
-                  <div style={{ fontSize: '20px', fontWeight: '700', color: '#2563eb', margin: '12px 0' }}>
+                  <div style={{ fontSize: '20px', fontWeight: '700', color: '#2D5016', margin: '12px 0' }}>
                     {matchingFeedback}
                   </div>
                 )}
@@ -1059,14 +1059,14 @@ function App() {
             {/* Patient Result Screen */}
             {screen === 'result' && (
               <div className="panel result-card">
-                <h2 style={{ fontSize: '38px', color: '#1e3a8a', marginBottom: '14px' }}>
+                <h2 style={{ fontSize: '38px', color: '#2D5016', marginBottom: '14px' }}>
                   {gameResult?.title || t('well_done', activePatientLanguage)}
                 </h2>
                 <p style={{ fontSize: '22px', color: 'var(--text-dark)', marginBottom: '18px' }}>
                   {gameResult?.subtitle || t('completed_activity', activePatientLanguage)}
                 </p>
 
-                <div style={{ fontSize: '28px', fontWeight: '800', color: '#1e3a8a', background: '#eff6ff', border: '1px solid #bfdbfe', padding: '14px 36px', borderRadius: '30px', display: 'inline-block', marginBottom: '22px' }}>
+                <div style={{ fontSize: '28px', fontWeight: '800', color: '#2D5016', background: '#E8F0E2', border: '1px solid #C4B99A', padding: '14px 36px', borderRadius: '30px', display: 'inline-block', marginBottom: '22px' }}>
                   {gameResult?.scoreSummary}
                 </div>
 
@@ -1141,7 +1141,7 @@ function App() {
 
                     <div style={{ marginTop: '16px', textAlign: 'center', fontSize: '14px' }}>
                       Need an account?{' '}
-                      <button type="button" style={{ background: 'none', border: 'none', color: '#2563eb', fontWeight: '700', cursor: 'pointer' }} onClick={() => setAuthView('register')}>
+                      <button type="button" style={{ background: 'none', border: 'none', color: '#2D5016', fontWeight: '700', cursor: 'pointer' }} onClick={() => setAuthView('register')}>
                         Register here
                       </button>
                     </div>
@@ -1182,7 +1182,7 @@ function App() {
                     </button>
                     <div style={{ marginTop: '16px', textAlign: 'center', fontSize: '14px' }}>
                       Already registered?{' '}
-                      <button type="button" style={{ background: 'none', border: 'none', color: '#2563eb', fontWeight: '700', cursor: 'pointer' }} onClick={() => setAuthView('login')}>
+                      <button type="button" style={{ background: 'none', border: 'none', color: '#2D5016', fontWeight: '700', cursor: 'pointer' }} onClick={() => setAuthView('login')}>
                         Sign in here
                       </button>
                     </div>
@@ -1204,7 +1204,7 @@ function App() {
                 </div>
 
                 {/* Patient Selector Bar */}
-                <div style={{ background: '#ffffff', padding: '16px 20px', borderRadius: '14px', border: '1px solid #cbd5e1', marginBottom: '24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '14px' }}>
+                <div style={{ background: '#ffffff', padding: '16px 20px', borderRadius: '14px', border: '1px solid #C4B99A', marginBottom: '24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '14px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <span style={{ fontWeight: '700', fontSize: '16px' }}>Select Active Patient:</span>
                     <select
@@ -1291,7 +1291,7 @@ function App() {
                               <XAxis dataKey="date" />
                               <YAxis domain={[0, 100]} />
                               <Tooltip formatter={(val) => [`${val}%`, 'Accuracy']} />
-                              <Line type="monotone" dataKey="accuracy" stroke="#1e3a8a" strokeWidth={3} dot={{ r: 4 }} activeDot={{ r: 6 }} />
+                              <Line type="monotone" dataKey="accuracy" stroke="#2D5016" strokeWidth={3} dot={{ r: 4 }} activeDot={{ r: 6 }} />
                             </LineChart>
                           </ResponsiveContainer>
                         </div>
@@ -1308,8 +1308,8 @@ function App() {
                       Upload real photographs of family members and assign their exact relationship. The caregiver relationship establishes the ground truth for the Family Game.
                     </p>
 
-                    <div style={{ background: '#f8fafc', border: '1px solid #cbd5e1', padding: '22px', borderRadius: '14px', marginBottom: '26px' }}>
-                      <h4 style={{ fontSize: '18px', marginBottom: '14px', color: '#1e3a8a' }}>+ Upload New Family Member</h4>
+                    <div style={{ background: '#F5F0E8', border: '1px solid #C4B99A', padding: '22px', borderRadius: '14px', marginBottom: '26px' }}>
+                      <h4 style={{ fontSize: '18px', marginBottom: '14px', color: '#2D5016' }}>+ Upload New Family Member</h4>
 
                       {photoUploadError && (
                         <div style={{ background: '#fef2f2', border: '1px solid #fecaca', color: '#991b1b', padding: '10px 14px', borderRadius: '8px', marginBottom: '14px', fontSize: '14px', fontWeight: '600' }}>
@@ -1335,7 +1335,7 @@ function App() {
                             {previewUrl && (
                               <div style={{ marginTop: '10px' }}>
                                 <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>Image Preview:</span>
-                                <img src={previewUrl} alt="Preview" style={{ width: '90px', height: '90px', objectFit: 'cover', borderRadius: '12px', border: '2px solid #1e3a8a' }} />
+                                <img src={previewUrl} alt="Preview" style={{ width: '90px', height: '90px', objectFit: 'cover', borderRadius: '12px', border: '2px solid #2D5016' }} />
                               </div>
                             )}
                           </div>
@@ -1391,14 +1391,14 @@ function App() {
                             <img
                               src={`${API_SERVER}${mem.photo_url}`}
                               alt={mem.name}
-                              style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '14px', marginBottom: '10px', border: '2px solid #1e3a8a' }}
+                              style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '14px', marginBottom: '10px', border: '2px solid #2D5016' }}
                             />
                           ) : (
                             <div className="family-photo">{mem.photo_url || '👨‍👩‍👧‍👦'}</div>
                           )}
 
                           <strong style={{ fontSize: '19px', display: 'block', color: '#0f172a' }}>{mem.name}</strong>
-                          <span style={{ color: '#1e3a8a', fontWeight: '700', fontSize: '15px' }}>{mem.relationship}</span>
+                          <span style={{ color: '#2D5016', fontWeight: '700', fontSize: '15px' }}>{mem.relationship}</span>
                           <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginTop: '8px' }}>{mem.description}</p>
                         </div>
                       ))}
@@ -1538,7 +1538,7 @@ function App() {
                         activitiesHistory.map((item, index) => (
                           <div key={index} style={{ background: '#ffffff', border: '1px solid var(--border-color)', padding: '18px', borderRadius: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
                             <div>
-                              <strong style={{ fontSize: '17px', color: '#1e3a8a' }}>
+                              <strong style={{ fontSize: '17px', color: '#2D5016' }}>
                                 {item.activity_type?.replace('_', ' ').toUpperCase()}
                               </strong>
                               <div style={{ fontSize: '14px', color: 'var(--text-muted)', marginTop: '4px' }}>
@@ -1547,7 +1547,7 @@ function App() {
                             </div>
 
                             <div style={{ textAlign: 'right' }}>
-                              <div style={{ fontSize: '22px', fontWeight: '800', color: item.accuracy >= 0.75 ? '#15803d' : '#c2410c' }}>
+                              <div style={{ fontSize: '22px', fontWeight: '800', color: item.accuracy >= 0.75 ? '#15803d' : '#92400E' }}>
                                 {Math.round(item.accuracy * 100)}% Accuracy
                               </div>
                             </div>
@@ -1568,7 +1568,7 @@ function App() {
                       alerts.map((alert) => (
                         <div key={alert.id} className={`alert-card ${alert.reviewed ? 'reviewed' : ''}`}>
                           <div>
-                            <strong style={{ fontSize: '17px', color: alert.reviewed ? 'var(--text-muted)' : '#c2410c' }}>
+                            <strong style={{ fontSize: '17px', color: alert.reviewed ? 'var(--text-muted)' : '#92400E' }}>
                               {alert.title}
                             </strong>
                             <p style={{ fontSize: '15px', marginTop: '4px', color: '#1e293b' }}>{alert.message}</p>
